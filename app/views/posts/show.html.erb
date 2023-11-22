@@ -35,6 +35,9 @@
     <div class="comment">
       <h4 class="comment-user" style="text-decoration: underline;">Anonymous:</h4>
       <p class="comment-body"><%= comment.body %></p>
+      
+      <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+      <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
 </div>
