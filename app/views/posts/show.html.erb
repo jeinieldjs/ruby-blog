@@ -15,7 +15,7 @@
 </div>
 
 <div class="comment-form">
-    <p class= 'notes'>Leave a message</p>
+    <h2 class= 'notes'>Leave a comment</h2>
     <%= render 'comments/form', post: @post, comment: @comment, class:'form' %>
 </div>
 
@@ -23,11 +23,12 @@
   <h2><%= @post.comments.count %> Comment/s:</h2>
   <% @comments.each do |comment| %>
     <div class="comment">
-      <h4 class="comment-user"><%= comment.name %></h4>
+      <h4 class="comment-name"><%= comment.name %></h4>
       <p class="comment-body"><%= comment.body %></p>
-      
-      <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-      <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class='bottom-row'>
+        <%= button_to link_to "Edit", edit_post_comment_path(@post, comment) , class: 'edit-comment' %>  |
+        <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, class: 'delete-comment', data: { confirm: 'Are you sure?'}  %>
+      </div>
     </div>
   <% end %>
 </div>
