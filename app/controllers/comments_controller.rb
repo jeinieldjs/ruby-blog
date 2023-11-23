@@ -8,9 +8,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post), notice: 'Comment posted.'
     else
-      # flash[:error] = 'Comment creation failed: ' + @comment.errors.full_messages.join('. ')
       render 'new', status: :unprocessable_entity
-      # redirect_to post_path(@post)
     end
   end
 
@@ -22,7 +20,6 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to post_path(@post), notice: 'Comment updated.'
     else
-      # flash[:error] = 'Comment update failed: ' + @comment.errors.full_messages.join('. ')
       render 'edit', status: :unprocessable_entity
     end
   end

@@ -1,6 +1,14 @@
+<div class='home'>
+    <div class='page_label'>
+      <h1 class='page-title'>Simple Blog</h1>
+      <p class='subtitle'>This is a simple blog page made with Rails. It allows you to post articles, and other people can comment on it.</p>
+      <%= link_to "New post", new_post_path, class: 'link-button' %>
+    </div>
+<div class='notice-container'>
 <p style="color: green"><%= notice %></p>
+</div>
 
-<h1>Posts</h1>
+
 
 <div id="posts">
   <% @posts.each do |post| %>
@@ -11,4 +19,5 @@
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+
+</div>

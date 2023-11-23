@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    color: black;
+    font-family: 'Poppins';
+}
+
+.page_label {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.page-title {
+    font-size: 3.5rem;
+    color: maroon;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-top: 0px;
+    color: lightslategray;
+}
+#posts {
+    width: 70%;
+    margin: auto;
+}
+.notice-container {
+    margin: auto;
+    margin-top: 0px;
+    width: 60%;
+}
+.link-button {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 3px;
+    text-align: center;
+    margin: auto;   
+    text-transform: uppercase;
+    background-color:white;
+    color: maroon;
+    border: solid 1px maroon;
+    border-radius: 5px;
+}
+
+.link-button:hover{
+    background-color:rgba(128, 0, 0, 0.695);
+    color: white;
+    border-radius: 5px;
+}

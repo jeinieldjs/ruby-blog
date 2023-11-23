@@ -12,7 +12,8 @@
 </div>
 
 <div class="comment-form">
-    <%= render 'comments/form', post: @post, comment: @comment %>
+    <p class= 'notes'>Leave a message</p>
+    <%= render 'comments/form', post: @post, comment: @comment, class:'form' %>
 </div>
 
 <div class="comments-section">
