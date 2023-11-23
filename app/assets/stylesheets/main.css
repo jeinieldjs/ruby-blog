@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+
 *{
-    color: black;
     font-family: 'Poppins';
+}
+
+.error-container {
+    color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .page_label {
@@ -28,6 +35,7 @@
 #posts {
     width: 70%;
     margin: auto;
+    
 }
 .notice-container {
     margin: auto;
@@ -51,4 +59,105 @@
     background-color:rgba(128, 0, 0, 0.695);
     color: white;
     border-radius: 5px;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    color: maroon;
+    text-transform: uppercase;
+}
+.post-body{
+    font-size: 1rem;
+    color: lightslategray;
+    font-weight: 400;
+}
+.indiv-post {
+    border-bottom: 1px solid lightgrey
+}
+
+.input {
+    width: 100%;
+}
+.text-input {
+    width: 100%;
+    height: 300px;
+}
+
+
+.form-proper {
+    width: 70%;
+    margin: auto;
+}
+.post-page {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+
+}
+.center-title {
+    margin: auto;
+}
+.post-content {
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.post-actions {
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    border-bottom: 1px solid lightgrey;
+}
+
+.delete-btn {
+    margin-top: 5px;
+    width: 100%;
+    background-color:rgba(128, 0, 0, 0.695);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+
+}
+.delete-btn:hover {
+    background-color:white;
+    color: maroon;
+    border: solid 1px maroon;
+    
+}
+.wrapper{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link:hover{
+    color: rgba(128, 0, 0, 0.664);
+}
+
+.notice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.message-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p.notice {
+    color: green; 
+    font-weight: 600;
 }

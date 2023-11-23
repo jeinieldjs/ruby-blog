@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div>
+  <section class='form-proper'>
+  <div class = 'form-input'>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title , class:'input' %>
   </div>
 
-  <div>
+  <div class = 'form-input'>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class:'text-input' %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
+  </section>
 <% end %>

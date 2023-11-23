@@ -1,14 +1,17 @@
+<div class='message-container'>
 <% flash.each do |key, value| %>
   <p class="<%= key %>"><%= value %></p>
 <% end %>
+</div>
 
 <%= render @post %>
 
 <div class="post-actions">
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
-
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  <div class ='top-link'>
+  <%= link_to "Edit Post", edit_post_path(@post), class:'link' %> |
+  <%= link_to "Home", posts_path, class:'link'%>
+  </div>
+  <%= button_to "Delete", @post, method: :delete, class:'delete-btn' %>
 </div>
 
 <div class="comment-form">
@@ -17,7 +20,7 @@
 </div>
 
 <div class="comments-section">
-  <h2>Comments:</h2>
+  <h2><%= @post.comments.count %> Comment/s:</h2>
   <% @comments.each do |comment| %>
     <div class="comment">
       <h4 class="comment-user"><%= comment.name %></h4>

@@ -1,9 +1,8 @@
-<h1>New post</h1>
+<div class='wrapper'>
+  <h1 class='page-title'>New post</h1>
+  <%= link_to "HOME", posts_path, class: 'link-button' %>
+</div>
 
 <%= render "form", post: @post %>
 
-<br>
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>

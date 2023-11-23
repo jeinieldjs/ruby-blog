@@ -5,17 +5,28 @@
       <%= link_to "New post", new_post_path, class: 'link-button' %>
     </div>
 <div class='notice-container'>
-<p style="color: green"><%= notice %></p>
+  <p style="color: red"><%= notice %></p>
 </div>
 
 
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div id="<%= dom_id post %>" class='indiv-post'>
+      <p>
+        <strong class='post-title'>
+          <%= post.title %>
+        </strong>
+      </p>
+
+      <p class='post-body'>
+        <%= truncate(post.body, length: 150) %>
+      </p>
+
+      <p>
+        <%= link_to "Read more", post , class:'link' %>
+      </p>
+    </div>
   <% end %>
 </div>
 
