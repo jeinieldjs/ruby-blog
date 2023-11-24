@@ -5,6 +5,9 @@
     font-family: 'Poppins';
 }
 
+a, a:visited {
+    color: maroon;
+}
 .error-container {
     color: red;
     display: flex;
@@ -24,6 +27,9 @@
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
+.title-wrapper{
+    margin-bottom: 0px;
+}
 
 .subtitle {
     font-size: 1rem;
@@ -35,7 +41,10 @@
 #posts {
     width: 70%;
     margin: auto;
-    
+    border-top: solid maroon 2px;
+    border-bottom: solid maroon 2px;
+    margin-bottom: 20px;
+   
 }
 .notice-container {
     margin: auto;
@@ -68,11 +77,11 @@
 }
 .post-body{
     font-size: 1rem;
-    color: lightslategray;
+    color: darkslategrey;
     font-weight: 400;
 }
 .indiv-post {
-    border-bottom: 1px solid lightgrey
+    border-bottom: 1px solid lightgrey;
 }
 
 .input {
@@ -183,6 +192,7 @@ p.notice {
     text-transform: uppercase;
     font-size: 1.2rem;
     padding-right: 10px;
+    margin-bottom: 0px;
 }
 .comment-body {
     font-weight: 300;
@@ -204,4 +214,9 @@ p.notice {
 
 .delete-comment {
     color: maroon;
-}  
+} 
+.time {
+    font-size: 0.6rem;
+    padding: 0px;
+    color: lightslategray;
+} 

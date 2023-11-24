@@ -37,7 +37,6 @@ class CommentsController < ApplicationController
 
   def set_comment
     @comment = Comment.find(params[:id])
-    redirect_to post_path(@post), alert: "Comment not found" unless @comment
   end
 
   def comment_params

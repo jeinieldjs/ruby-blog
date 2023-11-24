@@ -4,6 +4,19 @@
     <strong class='page-title'><%= post.title %></strong>
   </p>
 
+  <div class='time'>
+    <% if post.persisted? %>
+      <div class='form-input'>
+        <strong>Posted At:</strong> <%= post.created_at %>
+      </div>
+    <% end %>
+    <% if post.updated_at? %>
+      <div class='form-input'>
+        <strong>Updated At:</strong> <%= post.updated_at %>
+      </div>
+    <% end %> 
+  </div>
+
   <p class ='post-content'>
     <%= simple_format(@post.body) %>
   </p>

@@ -1,23 +1,36 @@
 <div class='home'>
     <div class='page_label'>
-      <h1 class='page-title'>Simple Blog</h1>
+      <h1 class='page-title'>Rails Blog</h1>
       <p class='subtitle'>This is a simple blog page made with Rails. It allows you to post articles, and other people can comment on it.</p>
       <%= link_to "New post", new_post_path, class: 'link-button' %>
     </div>
-<div class='notice-container'>
-  <p style="color: red"><%= notice %></p>
-</div>
+    <div class='notice-container'>
+      <p style="color: red"><%= notice %></p>
+    </div>
 
 
 
 <div id="posts">
   <% @posts.each do |post| %>
     <div id="<%= dom_id post %>" class='indiv-post'>
-      <p>
+      <p class='title-wrapper'>
         <strong class='post-title'>
           <%= post.title %>
         </strong>
       </p>
+
+    <div class='time'>
+    <% if post.persisted? %>
+      <div class='form-input'>
+        <strong>Posted At:</strong> <%= post.created_at %>
+      </div>
+    <% end %>
+    <% if post.updated_at? %>
+      <div class='form-input'>
+        <strong>Updated At:</strong> <%= post.updated_at %>
+      </div>
+    <% end %> 
+  </div>
 
       <p class='post-body'>
         <%= truncate(post.body, length: 150) %>

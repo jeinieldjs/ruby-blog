@@ -24,6 +24,20 @@
   <% @comments.each do |comment| %>
     <div class="comment">
       <h4 class="comment-name"><%= comment.name %></h4>
+      
+      <div class='time'>
+         <% if comment.persisted? %>
+          <div class='form-input'>
+            <strong>Posted At:</strong> <%= comment.created_at %>
+          </div>
+        <% end %>
+        <% if comment.updated_at? %>
+          <div class='form-input'>
+            <strong>Updated At:</strong> <%= comment.updated_at %>
+          </div>
+        <% end %> 
+      </div>
+
       <p class="comment-body"><%= comment.body %></p>
       <div class='bottom-row'>
         <%= button_to link_to "Edit", edit_post_comment_path(@post, comment) , class: 'edit-comment' %>  |
