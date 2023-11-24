@@ -15,8 +15,9 @@
 </div>
 
 <div class='comment-form'>
-    <h2 class= 'notes'>Leave a comment</h2>
-    <%= render 'comments/form', post: @post, comment: @comment, class:'form' %>
+    <%= link_to "Leave a message", new_post_comment_path(@post), class: 'link-button' %>
+
+    
 </div>
 
 <div class='comments-section'>

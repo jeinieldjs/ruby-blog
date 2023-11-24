@@ -1,10 +1,6 @@
 <div class='wrapper'>
-  <h1 class='page-title'>New Comment</h1>
-  <%= link_to 'Back to Post', post_path(@post), class:'link' %>
-<div>
+<h1 class='page-title'>New Comment</h1>
+<%= link_to 'Back to Post', post_path(@post), class:'link' %>
+</div>
 
 <%= render 'form', post: @post, comment: @comment %>
-
-
-
-
