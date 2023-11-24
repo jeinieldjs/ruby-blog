@@ -5,12 +5,12 @@
       <%= link_to "New post", new_post_path, class: 'link-button' %>
     </div>
     <div class='notice-container'>
-      <p style="color: red"><%= notice %></p>
+      <p style='color: red'><%= notice %></p>
     </div>
 
 
 
-<div id="posts">
+<div id='posts'>
   <% @posts.each do |post| %>
     <div id="<%= dom_id post %>" class='indiv-post'>
       <p class='title-wrapper'>
@@ -37,7 +37,7 @@
       </p>
 
       <p>
-        <%= link_to "Read more", post , class:'link' %>
+        <%= link_to 'Read more', post , class:'link' %>
       </p>
     </div>
   <% end %>

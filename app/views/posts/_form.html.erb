@@ -1,7 +1,7 @@
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <div style='color: red'>
+      <h2><%= pluralize(post.errors.count, 'error') %> prohibited this post from being saved:</h2>
 
       <ul>
         <% post.errors.each do |error| %>
@@ -13,12 +13,12 @@
 
   <section class='form-proper'>
   <div class = 'form-input'>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :title, style: 'display: block' %>
     <%= form.text_field :title , class:'input' %>
   </div>
 
   <div class = 'form-input'>
-    <%= form.label :body, style: "display: block" %>
+    <%= form.label :body, style: 'display: block' %>
     <%= form.text_area :body, class:'text-input' %>
   </div>
 

@@ -117,6 +117,12 @@ a, a:visited {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+    width: 90%;
+    margin-top: 10px;
+}
+.post-upper {
+    text-align: center;
+    border-bottom: solid 2px maroon;
 }
 
 .post-actions {
@@ -128,7 +134,7 @@ a, a:visited {
     justify-content: center;
     width: 60%;
     margin: auto;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: solid maroon 2px;
 }
 
 .delete-btn {
@@ -177,7 +183,7 @@ p.notice {
     padding-right: 15px;
 }
 .comments-section {
-    border-top: 1px solid lightgrey;
+ 
     margin-top: 10px; 
 }
 .comment {
